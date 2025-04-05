@@ -1,0 +1,162 @@
+
+body {
+    font-family: Arial, sans-serif;
+  }
+  
+  .delete-icon {
+    width: 30px; /* Размер иконки */
+    height: 30px;
+    cursor: pointer; /* Курсор в виде указателя */
+    background-color: #f9f9f9; /* Цвет фона */
+  }
+  .rounded-containerBasket {
+    width: 1000px; /* Ширина контейнера */
+    height: auto; /* Высота контейнера */
+    background-color: #bfc0c0; /* Цвет фона */
+    border-radius: 20px; /* Закругление углов */
+    padding: 0px; /* Внутренний отступ */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тень для красоты */
+    text-align: left; /* Выравнивание текста по центру */
+    padding: 30px 30px;
+    margin: 20px;
+       
+}
+
+.vertekal
+{
+  display: flex;
+  align-items: center; 
+  gap:260px
+}
+
+.ver{
+  display: flex;
+  align-items: center; 
+  gap:150px
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #bfc0c0;
+}
+
+.cart-item span {
+  flex: 1;
+  text-align: center;
+
+}
+
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+  justify-content: center;
+}
+
+.quantity-controls button {
+  background-color: #007bff;
+  color: rgb(244, 240, 240);
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.quantity-controls button:hover {
+  background-color: #0056b3;
+}
+.cart-item span {
+  flex: 1;
+  text-align: center;
+  margin-right: 20px; /* Расстояние между элементами */
+}
+
+.cart-item .item-name {
+  text-align: left; /* Название товара выравниваем по левому краю */
+  margin-left: 20px; /* Смещаем название вправо */
+}
+
+.add-btnBasket{
+  padding: 10px 15px;
+  width: 200px;
+  height: 40px;
+  background-color: #0e0e0eab;
+  color: rgb(238, 251, 0);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 0  0 0 80px;
+}
+
+.add-btn:hover {
+  background-color: #03b8ff;
+}
+p{
+  float: right;
+}
+
+
+/* Модаль */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+  background-color:#bfc0c0;
+  margin: 10% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 500px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: black;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.submit-btn {
+  background-color: #0e0e0eab;
+  color: rgb(238, 251, 0);
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}

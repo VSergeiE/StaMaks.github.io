@@ -1,0 +1,158 @@
+/* фото на фоне  */
+.fon{
+    background: url('img/Fon.jpg') no-repeat center center fixed;
+    background-size: cover;
+    padding: 400px 0;
+    }
+.razel
+{
+    width: 30px;                /* Фиксированная ширина для картинок */
+    height: 30px;                /* Автоматическая высота для сохранения пропорций */
+    border-radius: 8px;          /* Скругленные углы для картинок */
+    transition: all 0.3s ease; /* Плавный эффект на все изменения */
+    border: 3px solid transparent; /* Изначально прозрачная рамка */
+    opacity: 1;                  /* Начальная непрозрачность */
+
+}
+
+.imgTovar{
+    width: 100%;                /* Фиксированная ширина для картинок */
+    height: auto;                /* Автоматическая высота для сохранения пропорций */
+    border-radius: 8px;          /* Скругленные углы для картинок */
+    transition: all 0.3s ease; /* Плавный эффект на все изменения */
+    border: 3px solid transparent; /* Изначально прозрачная рамка */
+    opacity: 1;                  /* Начальная непрозрачность */
+
+}
+/* Родительский контейнер с сеткой */
+.parent {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Автоматическое количество колонок */
+    /*gap: 1px;  Отступы между элементами */
+    padding: 20px; /* Отступы внутри контейнера */
+    box-sizing: border-box; /* Учитываем padding в общей ширине */
+  }
+  
+  /* Элементы сетки */
+  .child {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Выравнивание элементов по центру */
+    justify-content: space-between; /* Горизонтальное выравнивание по левому краю */
+    border: 3px solid #000; /* Рамка вокруг */
+    padding: 20px;
+    text-align: center;
+    /* Задайте высоту, чтобы было видно выравнивание */
+  }
+  
+  /* Обрезка и стили для изображения */
+  .image-wrapper {
+    width: 20%;
+    height: auto;
+    margin-bottom: 10px;
+    justify-content: center; /* Горизонтальное центрирование */
+  }
+  
+  /* Текст */
+  .text {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    justify-content: center; /* Горизонтальное центрирование */
+
+  }
+  
+
+  /* Кнопка */
+  .add-btn {
+    padding: 10px 15px;
+    background-color: #0e0e0eab;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .quantity-input {
+    display: flex;
+    align-items: center;
+    
+  }
+  
+  .quantity-input input {
+    width: 50px;
+    text-align: center;
+    margin: 0 10px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .quantity-input button {
+    padding: 5px 10px;
+    background-color: #0e0e0eab;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .quantity-input button:hover {
+    background-color: #03b8ff;
+  }
+
+  .add-btn:hover {
+    background-color: #03b8ff;
+  }
+ 
+  .quantity-price {
+    margin: 10px 0;
+  }
+  
+  .quantity-price label {
+    font-size: 16px; /* Уменьшаем размер шрифта */
+    margin: 5px 0; /* Уменьшаем отступы */
+  }
+  
+  .quantity-price input {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 5px;
+  }
+  
+  
+  #cart {
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  
+
+  #cart-count {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: #03b8ff; /* Цвет фона для счетчика */
+    color: white; /* Цвет текста */
+    border-radius: 50%; /* Круглая форма */
+    padding: 2px 6px;
+    font-size: 12px;}
+    
+    #cart-icon {
+     
+      bottom: 20px; /* Отступ снизу */
+      right: 20px; /* Отступ справа */
+      transform: translateY(-50px);
+      transform: translateX(5px);
+      background-color: #fffafaab; /* Цвет фона */
+      padding: 10px; /* Внутренний отступ */
+      border-radius: 50%; /* Круглая форма */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Тень */
+      text-decoration: none; /* Убираем подчеркивание */
+      z-index: 1000; /* Чтобы иконка была поверх других элементов */
+    }

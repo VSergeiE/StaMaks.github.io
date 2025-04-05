@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index</title>
+    <link rel="apple-touch-icon" sizes="57x57" href="IMG.ico/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="IMG.ico/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="IMG.ico/android-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="IMG.ico/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="IMG.ico/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="IMG.ico/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="IMG.ico/android-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="IMG.ico/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="IMG.ico/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="IMG.ico/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="IMG.ico/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="IMG.ico/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="IMG.ico/favicon-16x16.png">
+    <link rel="manifest" href="manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="css/mail.css">
+    <link rel="stylesheet" href="css/Proba.css">
+    <link rel="stylesheet" href="css/RedSeven.css">
+    <link rel="stylesheet" href="css/Basket.css">
+
+</head>
+    
+   
+<body class="wrapper">
+    <!-- <div class="wrapper"> - задний фон  -->
+    <div >
+    <!-- шапка -->
+    <!-- container- поможет определить отступы от сторон  -->
+<header class= "container">
+    <div class="header-content"> 
+
+      <a href="index.html">  <img src="img/StaMaks.png" alt="" class="logo-img"></a>
+        <!-- <br>- переход на новую строчку  -->
+        <span class="logo">
+            <h1> СтаМакс</h1><br>
+            <h3>Сервестный центр</h3> 
+        </span>
+        </div>
+            <!-- nav- навигация  -->
+             <nav>
+    <ul>
+       <p><h1>+79832188459</h1></p>
+       <li class="hover-highlight"> <a href="index.html">Главная</a> </li>
+       <li class=" hover-highlight"><a href="express.html">Экспресс</a> </li>
+       <li class=" hover-highlight"><a href="sparepart.html">Запчасти на электропастух</a> </li> 
+       <li class = "active" ><a id="cart-icon"><img src="img/add_2298398.png" alt="Корзинка" class="razel"></a> </li> 
+    </ul>
+</nav>
+</header>
+</div>
+<div class="container">
+  <div class="rounded-containerBasket">
+    <form>
+      <h1>Корзина</h1>
+      <br>
+      <div class="vertekal">
+      <div >
+        <h4>Наименование</h4>
+      </div>
+      <div class="ver">
+        <h4 >Цена</h4>
+        <h4>Количество</h4>
+        <h4>Всего</h4>
+      </div>
+      </div>
+
+      <hr> 
+      <ul id="cart-items"></ul>
+      <hr> 
+    </form>
+    <p>Итого: <span id="total-amount">0</span> руб.
+      <button  id="openModalBtn"  class="add-btnBasket">Продолжить</button>
+    </p>
+  </div>
+</div>
+<!-- Само модальное окно -->
+<div id="myModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Оформление заказа</h2>
+    <br>
+    <form id="orderForm">
+      <div class="order-items">
+        <h3>Ваш заказ:</h3>
+        <ul id="modal-items-list"></ul> <!-- Важно: другой ID! -->
+        <p class="order-total">Итого: <span id="modal-total">0</span> руб.</p>
+      </div>
+      <div class="form-group">
+        <label for="fio">ФИО:</label>
+        <input type="text" id="fio" required>
+      </div>
+      <div class="form-group">
+        <label for="phone">Телефон:</label>
+        <input type="tel" id="phone" required>
+      </div>
+      <div class="form-group">
+        <label for="address">Адрес:</label>
+        <input type="text" id="address" required>
+      </div>
+      <div class="form-group">
+        <label for="dostavka">Способ доставки:</label>
+        <input type="text" id="dostavka" required>
+      </div>
+      <div class="form-group">
+        <label for="comments">Комментарий:</label>
+        <textarea id="comments"></textarea>
+      </div>
+      <button type="submit" class="submit-btn">Отправить заказ</button>
+      
+    </form>
+  </div>
+</div>
+
+
+<footer>
+  <hr> 
+  <div class = "right">
+         <p>2013 - 2025 <span class ="upi"><img src="img/Remove.png" alt="Защита"> OOO"НПК"СтаМакс"</span>
+          Сделан в России,сделан для России </p>
+         </div>
+     </footer>
+        <!-- Подключаем JavaScript в конце body -->
+  <script>
+     document.addEventListener('DOMContentLoaded', function () {
+      const cartItems = document.getElementById('cart-items');
+      const totalAmount = document.getElementById('total-amount');
+
+      let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+      function renderCart() {
+        cartItems.innerHTML = '';
+        let total = 0;
+
+        cart.forEach((item, index) => {
+          const li = document.createElement('li');
+          li.innerHTML =
+           `
+                           <div class="cart-item">
+                            <span class="item-name">${item.name}:</span> 
+                            <span class="item-price"> ${item.price.toFixed(2)} руб.</span>
+                            <div class="quantity-controls">
+                                <button onclick="changeQuantity(${index}, -1)">-</button>
+                                <span>${item.quantity} шт.</span>
+                                <button onclick="changeQuantity(${index}, 1)">+</button>
+                            </div>
+                            <span>${(item.quantity * item.price).toFixed(2)} руб.</span>
+           <button onclick="removeItem(${index})">
+               <img src="img/computer_14296565.png" alt="Удалить" class="delete-icon">
+                    </button>
+          `;
+          cartItems.appendChild(li);
+          total += item.quantity * item.price;
+        });
+
+        totalAmount.textContent = total.toFixed(2);
+      }
+
+      window.changeQuantity = function (index, delta) {
+                cart[index].quantity += delta;
+                if (cart[index].quantity < 1) cart[index].quantity = 1; // Минимальное количество = 1
+                localStorage.setItem('cart', JSON.stringify(cart));
+                renderCart();
+    };
+
+
+window.removeItem = function (index) {
+    cart.splice(index, 1);
+    localStorage.setItem('cart', JSON.stringify(cart));
+    renderCart();
+};
+
+renderCart();
+});
+  </script>
+       <script src="Js/Modol.js"></script>
+</body>
+</html>

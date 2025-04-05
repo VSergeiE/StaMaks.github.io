@@ -1,0 +1,163 @@
+.Expimg
+{
+width: 100px;
+height: 100px;
+}
+
+.rounded-container {
+    width: 1000px; /* Ширина контейнера */
+    height: 400px; /* Высота контейнера */
+    background-color:  #bfc0c0; /* Цвет фона */
+    border-radius: 20px; /* Закругление углов */
+    padding: 20px; /* Внутренний отступ */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тень для красоты */
+    text-align: center; /* Выравнивание текста по центру */
+    padding: 30px 30px;
+}
+ /* Скрываем стандартный RadioButton */
+ input[type="radio"] {
+    display: none;
+  }
+
+  /* Стили для изображений */
+  label img {
+    border: 2px solid transparent;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+    width: 50px;
+    height: 50px;
+  }
+
+  /* Изменение стиля изображения при выборе */
+  input[type="radio"]:checked + label img {
+    border-color: #d9e62d; /* Зеленая рамка */
+    box-shadow: 0 0 10px rgba(251, 251, 251, 0.5); /* Тень */
+  }
+
+  /* Стили для контейнера с картинками */
+  .image-containerExpress {
+    display: inline-block; /* Располагаем элементы горизонтально */
+    margin-right: 400px; /* Отступ между картинками */
+  }
+  /* Ширина поля ввода*/
+  .large-input {
+    width:900px; /* Ширина поля */
+    height: 10px; /* Высота поля */
+    font-size: 15px; /* Размер шрифта */
+    padding: 10px; /* Внутренние отступы */
+  }
+
+  .textMin{
+    font-size: 10px; /* Размер шрифта */
+  }
+/* 
+  .featuresExpress {
+    background: url('img/черный.jpg') no-repeat center center fixed;
+    background-size: cover;
+    padding: 250px 0;
+    } */
+
+  .text-overlay {
+    position: absolute;
+    top: 70%; /* Позиция по вертикали */
+    left: 50%; /* Позиция по горизонтали */
+    transform: translate(-50%, -10%); /* Центрирование текста */
+    color: white; /* Цвет текста */
+    font-size: 24px; /* Размер шрифта */
+    font-weight: bold; /* Жирный шрифт */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Тень текста */
+  }
+
+  .rounded-containerOne {
+    width: 500px; /* Ширина контейнера */
+    height: 350px; /* Высота контейнера */
+    background-color: #bfc0c0; /* Цвет фона */
+    border-radius: 20px; /* Закругление углов */
+    padding: 0px; /* Внутренний отступ */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тень для красоты */
+    text-align: left; /* Выравнивание текста по центру */
+    padding: 30px 30px;
+    margin: 20px;
+       
+}
+
+.container-image {
+  width: 160px; /* Картинка занимает всю ширину контейнера */
+  height: 160px;
+  border-radius: 10px; /* Закругление углов картинки */
+  margin-bottom: 40px; /* Отступ снизу */
+  margin-left: 280px;
+}
+.container-imageTwo {
+  width: 140px; /* Картинка занимает всю ширину контейнера */
+  height: 140px;
+  border-radius: 10px; /* Закругление углов картинки */
+  margin-bottom: 0px; /* Отступ снизу */
+  margin-left: 280px;
+}
+.containerExpress{
+  margin: 20px;  /* Выравнивание по вертикали */
+}
+
+/*Кнопака */
+
+.add-btnExpress {
+  padding: 10px 15px;
+  width: 200px;
+  height: 40px;
+  background-color: #0e0e0eab;
+  color: rgb(251, 255, 1);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.add-btn:hover {
+  background-color: #03b8ff;
+}
+
+
+
+.large-inputDos {
+  font-size: 15px; /* Увеличиваем размер шрифта */
+  display: flex;
+  margin-left: 50px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  gap: 20px; /* Расстояние между элементами */
+}
+
+.marginExpress{
+  margin-right: 640px;
+}
+
+.large-inputDos input[type="text"] {
+  margin-right: 30px; /* Отступ между кнопкой и текстом */
+}
+
+.large-input label {
+  cursor: pointer; /* Курсор в виде указателя */
+  color: #f8f8f8; /* Цвет текста */
+}
+
+.large-inputDos input[type="radio"]:checked + label {
+  color: #e6fb03; /* Цвет текста при выборе */
+  font-weight: bold; /* Жирный шрифт при выборе */
+}
+
+.bottom-right {
+  position: absolute; /* Абсолютное позиционирование */
+  bottom: 10px; /* Отступ от нижнего края */
+  right: 10px; /* Отступ от правого края */
+  margin: 0; /* Убираем отступы */
+  font-size: 12px; /* Размер текста */
+  
+}
+.centered-text {
+  text-align: center; /* Выравнивание текста по центру */
+}
+
+.error {
+  border: 2px solid red;
+}

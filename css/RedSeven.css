@@ -1,0 +1,217 @@
+table {
+    width: 100%;
+    border-collapse: collapse; /* Убирает двойные границы между ячейками */
+}
+th, td {
+    border: 1px solid rgb(19, 19, 19); /* Добавляет границу вокруг ячеек */
+    padding: 8px; /* Добавляет отступы внутри ячеек */
+    text-align: center; /* Выравнивание текста по центру */
+  
+}
+th {
+    background-color: rgb(189, 189, 189); /* Цвет фона для заголовков */
+}
+
+/* фото на фоне 
+.features{
+background: url('img/6J.png') no-repeat center center fixed;
+background-size: cover;
+padding: 190px 0;
+} */
+.Redcentered {
+    text-align: center;
+    margin-top: 20px; /* Отступ сверху */
+    margin-bottom: 20px; /* Отступ снизу */
+}
+
+.Redcontainer{
+    width: 100%;  /* Ширина контейнера */
+    max-width: 1100px;
+    margin: 20px auto;
+    display: flex;  
+    justify-content: space-between; /* Распределение элементов по ширине */
+    align-items: center;      /* Выравнивание по вертикали */
+    margin-top: 20px; /* Отступ сверху */
+}
+
+.parentSOP {
+  display: flex;
+  flex-flow: row wrap; /* Убираем row-reverse и wrap-reverse для упрощения */
+  gap: 15px; /* Отступы между блоками */
+  padding: 20px; /* Отступы внутри контейнера */
+}
+
+.childSOP {
+  width: 30%; /* Уменьшаем ширину блока */
+  height: 30%; /* Уменьшаем высоту блока */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px; /* Уменьшаем внутренние отступы */
+  margin: 0;
+  box-sizing: border-box;
+  border: 3px solid #ccc; /* Для наглядности */
+}
+
+.textSOP{
+  font-size: 16px; /* Уменьшаем размер шрифта */
+  margin: 5px 0; /* Уменьшаем отступы */
+  text-align: center;
+} 
+
+.imgTovarSOP
+{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  max-width: none; /* Убираем ограничение по ширине */
+  max-height: none; /* Убираем ограничение по высоте */ /* Чтобы изображение не выходило за пределы контейнера */
+  border-radius: 5px;
+  object-fit: cover; /* Обрезает изображение, чтобы оно заполнило контейнер */
+}
+
+.image-wrapperSOP
+{
+  width: 250px; /* Ширина контейнера */
+  height: 250px; /* Высота контейнера */
+  margin: 10px;
+  margin-bottom: 5px;
+  justify-content: center; /* Горизонтальное центрирование */
+  display: flex; /* Для использования margin: auto */
+  align-items: center;
+  overflow: hidden; 
+  object-fit: contain
+}
+
+th:first-child, td:first-child {
+    width: 50px; /* Фиксированная ширина для первой колонки */
+}
+
+.Text{
+    font-size: 16px; /* Маленький размер текста */
+    text-align: center;
+    width: 100px;
+    height: 100px;
+    margin-bottom: 40px; /* Отступ снизу */
+    margin-top: 20px; /* Отступ сверху */
+}
+
+
+ nav {
+    float: right;
+    width: 90%;
+}
+
+ nav ul {
+   /* list-style: none - удали отображения списка  */
+   list-style: none;
+   display: flex;
+   gap: 5px; 
+   align-items: flex-end;     /* Выравнивание номеров по правому краю */
+   justify-content: space-between;/* justify-content: space-between; - раскиданы на все длинну  */
+}
+
+.Fut{
+    background: linear-gradient(90deg,#b2b2b2 100%);
+     background-size: 100% 100%; /* Ограниваем область, чтобы градиент был только один раз */
+     width: 100%;
+     height: 120px; 
+}
+/* Стили для бургер-меню */
+.burger-menu {
+    display: none; /* По умолчанию скрываем */
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  /* Скрываем навигацию на маленьких экранах */
+  @media (max-width: 768px) {
+    .burger-menu {
+      display: block; /* Показываем бургер-меню */
+    }
+  
+    nav {
+      display: none; /* Скрываем навигацию */
+      flex-direction: column;
+      position: absolute;
+      top: 100px; /* Позиция под шапкой */
+      left: 0;
+      width: 100%;
+      background: #02abff;
+      border: 1px solid #ccc;
+      z-index: 1000;
+    }
+  
+    nav ul {
+      flex-direction: column;
+      padding: 0;
+    }
+  
+    nav ul li {
+      margin: 10px 0;
+    }
+  
+    /* Показываем навигацию при активации */
+    nav.active {
+      display: flex;
+    }
+  }
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    background: rgb(189, 189, 189);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    
+  }
+  
+  .header-content {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo-img {
+    width: 150px;
+    height: auto;
+  }
+  
+  .logo h1 {
+    font-size: 24px;
+    margin: 0;
+  }
+  
+  .logo h3 {
+    font-size: 14px;
+    margin: 0;
+  }
+  
+  nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav ul li {
+    margin: 0 10px;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  .featuresOld {
+    background: url('img/Old.png');
+    
+    width: 100px;
+    height: 100px;
+   
+    }
+
+  
